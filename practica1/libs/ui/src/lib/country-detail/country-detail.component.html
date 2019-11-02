@@ -1,0 +1,22 @@
+<div style="margin: 5px; padding: 5px; border: 2px; border-style: solid;">
+
+  <h2>
+    {{ country.id }} / {{ country.iso2Code }}
+  </h2>
+
+  <h3>{{country.name}}</h3>
+  <br />
+  Capital: {{country.capitalCity}}
+  <br />
+  Region:
+  {{country.region.id}}/{{country.region.iso2code}}/{{country.region.value}}
+  <br />
+  Capital: {{country.capitalCity}}
+  <br />
+  Longitud: {{country.longitude}}
+  <br />
+  Latitud: {{country.latitude}}
+  <br />
+  <a href="/region/{{country.region.id}}">Ver región {{country.region.value}}</a>
+
+</div>

@@ -1,0 +1,20 @@
+<div style="margin: 5px; padding: 5px; border: 2px; border-style: solid;">
+
+  <h2>
+    {{ continent.id }} / {{ continent.iso2Code }}
+  </h2>
+
+  {{continent.name}}
+  <br />
+  Region:
+  {{continent.region.id}}/{{continent.region.iso2code}}/{{continent.region.value}}
+  <br />
+  Capital: {{continent.capitalCity}}
+  <br />
+  Longitud: {{continent.longitude}}
+  <br />
+  Latitud: {{continent.latitude}}
+  <br />
+  <a href="/country/{{continent.id}}">Ver detalle de {{continent.name}}</a>
+
+</div>
