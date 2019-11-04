@@ -8,9 +8,10 @@ import { RouterModule } from '@angular/router';
 import { RegionComponent } from './region/region.component';
 import { CountryComponent } from './country/country.component';
 import { HomeComponent } from './home/home.component';
+import { NumericRegionsPipe } from './numeric-regions.pipe';
 
 @NgModule({
-  declarations: [AppComponent, RegionComponent, CountryComponent, HomeComponent],
+  declarations: [AppComponent, RegionComponent, CountryComponent, HomeComponent, NumericRegionsPipe],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -32,6 +33,6 @@ import { HomeComponent } from './home/home.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [RegionComponent, CountryComponent, HomeComponent]
+  exports: [RegionComponent, CountryComponent, HomeComponent, NumericRegionsPipe]
 })
 export class AppModule {}
