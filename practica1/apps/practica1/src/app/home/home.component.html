@@ -1,7 +1,11 @@
 <p>Home page</p>
 
-<div *ngFor="let region of regions">
-    <practica1-region-detail [region]="region"></practica1-region-detail>
+
+<div *ngIf="regions$ | async as regions">
+    <div *ngFor="let region of regions[1]">
+        <practica1-region-detail [region]="region"></practica1-region-detail>
+    </div>
 </div>
+
 
 
