@@ -1,8 +1,8 @@
-<p>Home page</p>
+<h2>Home page</h2>
 
 
 <div *ngIf="regions$ | async as regions">
-    <div *ngFor="let region of (regions[1] | numericRegions) ">
+    <div class="region" *ngFor="let region of (regions[1] | numericRegions) ">
         <practica1-region-detail [region]="region"></practica1-region-detail>
     </div>
 </div>
