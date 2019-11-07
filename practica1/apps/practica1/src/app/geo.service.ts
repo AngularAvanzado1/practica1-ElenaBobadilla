@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
 @Injectable({
   providedIn: 'root'
 })
 export class GeoService {
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   getUrlRegions(){
     return 'http://api.worldbank.org/v2/region/?format=json';
