@@ -15,6 +15,7 @@ import { Continent } from '../model/continent.interface';
 export class RegionComponent implements OnInit {
 
   region_code: string;
+  summary: [];
   continents: Continent[];
 
   constructor(private route: ActivatedRoute,
@@ -25,6 +26,7 @@ export class RegionComponent implements OnInit {
 
     this.http.get(this.geoService.getURLContinents(this.region_code)).subscribe(
       data => {
+        this.summary = data[0];
         this.continents = data[1];
         this.cdr.detectChanges();
       },

@@ -2,9 +2,8 @@
 
 
 <div *ngIf="regions$ | async as regions">
-    <div class="region" *ngFor="let region of (regions[1] | numericRegions) ">
-        <practica1-region-detail [region]="region"></practica1-region-detail>
-    </div>
+  <practica1-home-summary [summary]="regions[0]"></practica1-home-summary>  
+  <practica1-region-list [regions]="regions[1]"></practica1-region-list>
 </div>
 
 

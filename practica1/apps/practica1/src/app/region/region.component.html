@@ -1,9 +1,6 @@
 
 <h2>Página región continental {{region_code}}</h2>
 
-<div class="continent" *ngFor="let continent of continents">
-  <practica1-continent-detail [continent]="continent"></practica1-continent-detail>
-</div>
+<practica1-region-summary [summary]="summary"></practica1-region-summary>
 
-
-
+<practica1-continent-list [continents]="continents"></practica1-continent-list>

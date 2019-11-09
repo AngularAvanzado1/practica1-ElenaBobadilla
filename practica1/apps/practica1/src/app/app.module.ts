@@ -9,9 +9,13 @@ import { RegionComponent } from './region/region.component';
 import { CountryComponent } from './country/country.component';
 import { HomeComponent } from './home/home.component';
 import { NumericRegionsPipe } from './numeric-regions.pipe';
+import { RegionListComponent } from './home/region-list/region-list.component';
+import { HomeSummaryComponent } from './home/home-summary/home-summary.component';
+import { ContinentListComponent } from './region/continent-list/continent-list.component';
+import { RegionSummaryComponent } from './region/region-summary/region-summary.component';
 
 @NgModule({
-  declarations: [AppComponent, RegionComponent, CountryComponent, HomeComponent, NumericRegionsPipe],
+  declarations: [AppComponent, RegionComponent, CountryComponent, HomeComponent, NumericRegionsPipe, RegionListComponent, HomeSummaryComponent, ContinentListComponent, RegionSummaryComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -33,6 +37,6 @@ import { NumericRegionsPipe } from './numeric-regions.pipe';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [RegionComponent, CountryComponent, HomeComponent, NumericRegionsPipe]
+  exports: [RegionComponent, CountryComponent, HomeComponent, NumericRegionsPipe, RegionListComponent, HomeSummaryComponent, ContinentListComponent, RegionSummaryComponent]
 })
 export class AppModule {}

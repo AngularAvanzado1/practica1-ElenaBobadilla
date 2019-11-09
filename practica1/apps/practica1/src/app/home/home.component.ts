@@ -4,6 +4,7 @@ import { ChangeDetectionStrategy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Region } from '../model/region.interface';
 import { Observable } from 'rxjs';
+import { RegionListComponent } from './region-list/region-list.component';
 
 
 @Component({
