@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Country } from '../../../../../apps/practica1/src/app/model/country.interface';
 
 @Component({
   selector: 'practica1-country-detail',
@@ -7,12 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CountryDetailComponent implements OnInit {
 
-  @Input() public country: [];
+  @Input() public country: Country;
 
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
 }

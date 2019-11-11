@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ContinentDetailComponent implements OnInit {
 
-  @Input() public continent: [];
+  @Input() public continent: any;
 
   constructor() { }
 

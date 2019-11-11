@@ -5,6 +5,7 @@ import { ChangeDetectorRef } from '@angular/core';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Continent } from '../model/continent.interface';
+import { Summary } from '../model/summary.interface';
 
 @Component({
   selector: 'practica1-region',
@@ -15,18 +16,24 @@ import { Continent } from '../model/continent.interface';
 export class RegionComponent implements OnInit {
 
   region_code: string;
-  summary: [];
+  summary: Summary;
   continents: Continent[];
 
   constructor(private route: ActivatedRoute,
     private router: Router, private geoService: GeoService, private http: HttpClient, private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
+    this.summary = {
+      'page': '0',
+      'pages': '0',
+      'total': '0'
+    };
     this.region_code = this.route.snapshot.paramMap.get('region_code');
 
     this.http.get(this.geoService.getURLContinents(this.region_code)).subscribe(
       data => {
         this.summary = data[0];
+        this.cdr.detectChanges();
         this.continents = data[1];
         this.cdr.detectChanges();
       },
