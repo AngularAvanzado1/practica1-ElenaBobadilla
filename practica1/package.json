@@ -6,7 +6,7 @@
     "ng": "ng",
     "nx": "nx",
     "start": "ng serve",
-    "start-en": "ng serve --configuration=production-en",
+    "start-en": "ng serve --configuration=en",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
@@ -37,7 +37,9 @@
     "@angular/forms": "^8.2.0",
     "@angular/platform-browser": "^8.2.0",
     "@angular/platform-browser-dynamic": "^8.2.0",
+    "@angular/pwa": "^0.803.18",
     "@angular/router": "^8.2.0",
+    "@angular/service-worker": "^8.2.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.4.0",
     "zone.js": "^0.9.1"

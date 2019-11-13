@@ -13,6 +13,8 @@ import { RegionListComponent } from './home/region-list/region-list.component';
 import { HomeSummaryComponent } from './home/home-summary/home-summary.component';
 import { ContinentListComponent } from './region/continent-list/continent-list.component';
 import { RegionSummaryComponent } from './region/region-summary/region-summary.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, RegionComponent, CountryComponent, HomeComponent, NumericRegionsPipe, RegionListComponent, HomeSummaryComponent, ContinentListComponent, RegionSummaryComponent],
@@ -33,7 +35,8 @@ import { RegionSummaryComponent } from './region/region-summary/region-summary.c
         component: CountryComponent,
       },
     ], { initialNavigation: 'enabled' }),
-    UiModule
+    UiModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],
