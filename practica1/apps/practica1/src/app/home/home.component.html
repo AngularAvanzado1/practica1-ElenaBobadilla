@@ -1,10 +1,7 @@
-<h2>Home page</h2>
-
+<h2 i18n>Home page</h2>
 
 <div *ngIf="regions$ | async as regions">
   <practica1-home-summary [summary]="regions[0]"></practica1-home-summary>  
   <practica1-region-list [regions]="regions[1]"></practica1-region-list>
 </div>
-
-
 

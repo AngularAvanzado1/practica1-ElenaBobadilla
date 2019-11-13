@@ -53,7 +53,21 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
+            },
+            "production-en": {
+              "fileReplacements": [
+                {
+                "replace": "apps/practica1/src/environments/environment.ts",
+                "with": "apps/practica1/src/environments/environment.prod.en.ts"
+                }
+              ],
+              "outputPath": "dist/apps/practica1/en/",
+              "i18nFile": "apps/practica1/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "baseHref": "en"
+             }
+
           }
         },
         "serve": {
@@ -64,6 +78,9 @@
           "configurations": {
             "production": {
               "browserTarget": "practica1:build:production"
+            },
+            "en": {
+              "browserTarget": "practica1:build:production-en"
             }
           }
         },

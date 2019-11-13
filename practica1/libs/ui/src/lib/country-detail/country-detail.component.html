@@ -6,17 +6,17 @@
 
   <h3>{{country.name}}</h3>
   <br />
-  Capital: {{country.capitalCity}}
+  <span i18n>Capital:</span> {{country.capitalCity}}
   <br />
-  Region:
+  <span i18n>Region:</span>
   {{country.region.id}}/{{country.region.iso2code}}/{{country.region.value}}
   <br />
-  Capital: {{country.capitalCity}}
+  <span i18n>Capital:</span> {{country.capitalCity}}
   <br />
-  Longitud: {{country.longitude}}
+  <span i18n>Longitud:</span> {{country.longitude}}
   <br />
-  Latitud: {{country.latitude}}
+  <span i18n>Latitud:</span> {{country.latitude}}
   <br />
-  <a class="link_region" href="/region/{{country.region.id}}">Ver región {{country.region.value}}</a>
+  <a class="link_region" href="/region/{{country.region.id}}"><span i18n>Ver región</span> {{country.region.value}}</a>
 
 </div>

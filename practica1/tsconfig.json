@@ -19,5 +19,8 @@
       "@practica1/ui": ["libs/ui/src/index.ts"]
     }
   },
+  "angularCompilerOptions": {
+    "enableIvy": false
+  },
   "exclude": ["node_modules", "tmp"]
 }

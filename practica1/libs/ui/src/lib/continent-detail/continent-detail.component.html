@@ -6,15 +6,15 @@
 
   {{continent.name}}
   <br />
-  Region:
+  <span i18n>Region:</span>
   {{continent.region.id}}/{{continent.region.iso2code}}/{{continent.region.value}}
   <br />
-  Capital: {{continent.capitalCity}}
+  <span i18n>Capital:</span> {{continent.capitalCity}}
   <br />
-  Longitud: {{continent.longitude}}
+  <span i18n>Longitud:</span> {{continent.longitude}}
   <br />
-  Latitud: {{continent.latitude}}
+  <span >Latitud:</span> {{continent.latitude}}
   <br />
-  <a class="link_continent" href="/country/{{continent.id}}">Ver detalle de {{continent.name}}</a>
+  <a class="link_continent" href="/country/{{continent.id}}"><span i18n>Ver detalle de </span>{{continent.name}}</a>
 
 </div>
